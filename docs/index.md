@@ -5,6 +5,7 @@ repository: "https://github.com/turbot/flowpipe-mod-nvd"
 # NVD Mod for Flowpipe
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
+
 - List CVEs
 - Get CVE
 - Search CVEs
@@ -38,20 +39,6 @@ cd flowpipe-mod-nvd
 ### Configuration
 
 This does not require credentials.
-<!-- Configure your credentials:
-
-```sh
-cp flowpipe.pvars.example flowpipe.pvars
-vi flowpipe.pvars
-```
-
-It's recommended to configure credentials through [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) by setting them in the `flowpipe.pvars` file.
-
-**Note:** Credentials can also be passed in each pipeline run with `--pipeline-args access_token=glpat_Token123`.
-
-Additional input variables may be defined in the mod's `variables.hcl` file that can be configured to better match your environment and requirements.
-
-Variables with defaults set do not need to be explicitly set, but it may be helpful to override them. -->
 
 ### Usage
 
@@ -75,7 +62,7 @@ To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpip
 flowpipe pipeline run list_cves
 ```
 
-Multiple pipeline args can be passed in with separate `--pipeline-arg` flags.
+Multiple pipeline args can be passed in with separate `--arg` flags.
 
 For more information on passing arguments, please see [Pipeline Args](https://flowpipe.io/docs/using-flowpipe/pipeline-arguments).
 

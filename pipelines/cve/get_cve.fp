@@ -1,13 +1,13 @@
 pipeline "get_cve" {
-  title       = "Get CVE details"
+  title       = "Get CVE"
   description = "Get details of a Common Vulnerabilities and Exposures (CVE) by the CVE ID."
 
   param "cve_id" {
-    type = string
+    type        = string
+    description = "The CVE ID to retrieve."
   }
 
   step "http" "get_cve" {
-    title  = "Get a CVE"
     method = "get"
     url    = "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=${param.cve_id}"
 
@@ -16,13 +16,7 @@ pipeline "get_cve" {
     }
   }
 
-  output "response_body" {
-    value = step.http.get_cve.response_body
-  }
-  output "response_headers" {
-    value = step.http.get_cve.response_headers
-  }
-  output "status_code" {
-    value = step.http.get_cve.status_code
+  output "vulnerability" {
+    value = step.http.get_cve.response_body.vulnerabilities[0]
   }
 }

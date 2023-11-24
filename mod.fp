@@ -7,7 +7,7 @@ mod "nvd" {
   categories    = ["nvd", "library"]
 
   opengraph {
-    title       = "NVD Library Mod for Flowpipe"
+    title       = "National Vulnerability Database (NVD)"
     description = "Run pipelines to supercharge your NVD workflows using Flowpipe."
     image       = "/images/flowpipe/mods/turbot/nvd-social-graphic.png"
   }
