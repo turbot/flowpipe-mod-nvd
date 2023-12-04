@@ -1,17 +1,17 @@
 pipeline "list_cves" {
   title       = "List CVEs."
-  description = "List of Common Vulnerabilities and Exposures (CVE) in the last 30 days."
+  description = "List of Common Vulnerabilities and Exposures (CVE) in the last 7 days."
 
   param "start_date" {
-    type    = string
+    type        = string
     description = "Date range from the current timestamp."
-    default = timeadd(timestamp(), "-720h")
+    default     = timeadd(timestamp(), "-168h")
   }
 
   param "end_date" {
-    type    = string
+    type        = string
     description = "The current timestamp."
-    default = timestamp()
+    default     = timestamp()
   }
 
   step "http" "list_cves" {
@@ -20,6 +20,10 @@ pipeline "list_cves" {
 
     request_headers = {
       Content-Type = "application/json"
+
+    }
+    retry {
+      max_attempts = 5
     }
 
     loop {
