@@ -17,6 +17,6 @@ pipeline "get_cve" {
   }
 
   output "vulnerability" {
-    value = step.http.get_cve.response_body.vulnerabilities[0]
+    value = step.http.get_cve.response_body
   }
 }

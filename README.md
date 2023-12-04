@@ -12,7 +12,6 @@ A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 ## Documentation
 
 - **[Pipelines →](https://hub.flowpipe.io/mods/turbot/nvd/pipelines)**
-- **[Triggers →](https://hub.flowpipe.io/mods/turbot/nvd/triggers)**
 
 ## Getting started
 
@@ -55,7 +54,7 @@ flowpipe pipeline run list_cves
 To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpipe/pipeline-parameters), use the following syntax:
 
 ```sh
-flowpipe pipeline run list_cves
+flowpipe pipeline get_cve --arg cve_id="CVE-2023-24023"
 ```
 
 Multiple pipeline args can be passed in with separate `--arg` flags.
