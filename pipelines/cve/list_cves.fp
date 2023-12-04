@@ -5,7 +5,7 @@ pipeline "list_cves" {
 
   param "start_date" {
     type    = string
-    default = timeadd(timestamp(), "-24h")
+    default = timeadd(timestamp(), "-2880h")
   }
 
   param "end_date" {
