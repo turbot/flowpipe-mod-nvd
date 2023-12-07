@@ -2,6 +2,10 @@ pipeline "list_cves" {
   title       = "List CVEs."
   description = "List of Common Vulnerabilities and Exposures (CVE) in the last 7 days."
 
+  tags = {
+    type = "featured"
+  }
+
   param "start_date" {
     type        = string
     description = "Date range from the current timestamp."

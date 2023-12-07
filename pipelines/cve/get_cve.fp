@@ -2,6 +2,10 @@ pipeline "get_cve" {
   title       = "Get CVE"
   description = "Get details of a Common Vulnerabilities and Exposures (CVE) by the CVE ID."
 
+  tags = {
+    type = "featured"
+  }
+
   param "cve_id" {
     type        = string
     description = "The CVE ID to retrieve."
