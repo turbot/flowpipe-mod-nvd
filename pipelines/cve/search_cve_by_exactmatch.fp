@@ -17,6 +17,7 @@ pipeline "search_cve_by_exactmatch" {
   }
 
   output "vulnerabilities" {
+    description = "List of vulnerabilities that exactly matches with the search keyword."
     value = step.http.search_cve_by_exactmatch.response_body
   }
 }

@@ -17,6 +17,7 @@ pipeline "search_cve_by_keyword" {
   }
 
   output "vulnerabilities" {
+    description = "List of vulnerabilities that matches with the search keyword."
     value = step.http.search_cve_by_keyword.response_body
   }
 }

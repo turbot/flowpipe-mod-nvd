@@ -21,6 +21,7 @@ pipeline "get_cve" {
   }
 
   output "vulnerability" {
+    description = "Get vulnerability details."
     value = step.http.get_cve.response_body
   }
 }
