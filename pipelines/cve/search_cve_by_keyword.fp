@@ -1,5 +1,5 @@
 pipeline "search_cve_by_keyword" {
-  title       = "Search CVE"
+  title       = "Search CVE by Keyword"
   description = "Search a CVE with a keyword or phrase found in the current description."
 
   param "keyword" {

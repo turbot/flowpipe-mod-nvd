@@ -1,5 +1,5 @@
 pipeline "search_cve_by_exactmatch" {
-  title       = "Search CVE by Exact Keyword Match"
+  title       = "Search CVE by Exact Match"
   description = "Search a CVE with a keyword or phrase which matches exactly in the current description."
 
   param "keyword_exactmatch" {
