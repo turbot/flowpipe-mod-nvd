@@ -24,6 +24,10 @@ git clone https://github.com/turbot/flowpipe-mod-nvd.git
 cd flowpipe-mod-nvd
 ```
 
+### Credentials
+
+No credentials are required.
+
 ### Usage
 
 List pipelines:
@@ -45,6 +49,10 @@ flowpipe pipeline run search_cve_by_exactmatch --arg keyword_exactmatch="Hello W
 ```
 
 For more examples on how you can run pipelines, please see [Run Pipelines](https://flowpipe.io/docs/run/pipelines).
+
+### Configuration
+
+No additional configuration is required.
 
 ## Open Source & Contributing
 
