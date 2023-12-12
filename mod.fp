@@ -2,7 +2,7 @@ mod "nvd" {
   title         = "National Vulnerability Database (NVD)"
   description   = "Run pipelines to supercharge your NVD workflows using Flowpipe."
   color         = "#000000"
-  documentation = file("./docs/index.md")
+  documentation = file("./README.md")
   icon          = "/images/mods/turbot/nvd.svg"
   categories    = ["security"]
 
