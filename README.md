@@ -17,18 +17,58 @@ brew tap turbot/tap
 brew install flowpipe
 ```
 
+### Credentials
+
+No credentials are required.
+
+### Usage
+
+[Initialize a mod](https://flowpipe.io/docs/build/index#initializing-a-mod):
+
+```sh
+mkdir my_mod
+cd my_mod
+flowpipe mod init
+```
+
+[Install the NVD mod](https://flowpipe.io/docs/build/mod-dependencies#mod-dependencies) as a dependency:
+
+```sh
+flowpipe mod install github.com/turbot/flowpipe-mod-nvd
+```
+
+[Use the dependency](https://flowpipe.io/docs/build/write-pipelines/index) in a pipeline step:
+
+```sh
+vi my_pipeline.fp
+```
+
+```hcl
+pipeline "my_pipeline" {
+
+  step "pipeline" "search_cve_by_exactmatch" {
+    pipeline = nvd.pipeline.search_cve_by_exactmatch
+    args = {
+      keyword_exactmatch = "Hello World!"
+    }
+  }
+}
+```
+
+[Run the pipeline](https://flowpipe.io/docs/run/pipelines):
+
+```sh
+flowpipe pipeline run my_pipeline
+```
+
+### Developing
+
 Clone:
 
 ```sh
 git clone https://github.com/turbot/flowpipe-mod-nvd.git
 cd flowpipe-mod-nvd
 ```
-
-### Credentials
-
-No credentials are required.
-
-### Usage
 
 List pipelines:
 
@@ -39,20 +79,8 @@ flowpipe pipeline list
 Run a pipeline:
 
 ```sh
-flowpipe pipeline run list_cves
-```
-
-You can pass in pipeline arguments as well:
-
-```sh
 flowpipe pipeline run search_cve_by_exactmatch --arg keyword_exactmatch="Hello World!"
 ```
-
-For more examples on how you can run pipelines, please see [Run Pipelines](https://flowpipe.io/docs/run/pipelines).
-
-### Configuration
-
-No additional configuration is required.
 
 ## Open Source & Contributing
 
