@@ -1,6 +1,6 @@
 # NVD Library Mod for Flowpipe
 
-NDV pipeline library for [Flowpipe](https://flowpipe.io) enabling seamless integration of NDV services into your workflows.
+[NVD](https://nvd.nist.gov/) pipeline library for [Flowpipe](https://flowpipe.io) enabling seamless integration of NVD services into your workflows.
 
 ## Documentation
 
@@ -95,4 +95,4 @@ This repository is published under the [Apache 2.0 license](https://www.apache.o
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [NDV Mod](https://github.com/turbot/flowpipe-mod-ndv/labels/help%20wanted)
+- [NVD Mod](https://github.com/turbot/flowpipe-mod-nvd/labels/help%20wanted)
