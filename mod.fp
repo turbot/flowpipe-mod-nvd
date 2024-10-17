@@ -4,7 +4,7 @@ mod "nvd" {
   color         = "#000000"
   documentation = file("./README.md")
   icon          = "/images/mods/turbot/nvd.svg"
-  categories    = ["security"]
+  categories    = ["library", "security"]
 
   opengraph {
     title       = "National Vulnerability Database (NVD) Mod for Flowpipe"
