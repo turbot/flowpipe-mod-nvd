@@ -3,7 +3,7 @@ pipeline "list_cves" {
   description = "List of Common Vulnerabilities and Exposures(CVE) in the last 7 days."
 
   tags = {
-    type = "featured"
+    recommended = "true"
   }
 
   param "start_date" {
