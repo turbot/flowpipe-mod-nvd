@@ -11,4 +11,10 @@ mod "nvd" {
     description = "Run pipelines to supercharge your NVD workflows using Flowpipe."
     image       = "/images/mods/turbot/nvd-social-graphic.png"
   }
+
+  require {
+    flowpipe {
+      min_version = "1.0.0"
+    }
+  }
 }
