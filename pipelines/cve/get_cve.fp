@@ -3,7 +3,7 @@ pipeline "get_cve" {
   description = "Get details of a Common Vulnerabilities and Exposures (CVE) by the CVE ID."
 
   tags = {
-    type = "featured"
+    recommended = "true"
   }
 
   param "cve_id" {
